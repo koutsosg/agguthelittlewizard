@@ -1,0 +1,97 @@
+import React from "react"
+import styled from "styled-components"
+import Layout from "../components/layout"
+import ImgMenu from "../components/imgMenu"
+const IndexHead = styled.header`
+  text-indent: 50px;
+  letter-spacing: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+`
+
+const ContactSection = ({ location }) => {
+  return (
+    <Layout location={location}>
+      <IndexHead className="py-3 p-5">
+        <div className="mw-30">
+          <h1 className="text-center ">
+            <span
+              style={{ color: "#66ff00", textShadow: "1px 1px 1px #000000" }}
+            >
+              A
+            </span>
+            <span
+              style={{ color: "#ff63ca", textShadow: "1px 1px 1px #000000" }}
+            >
+              G
+            </span>
+            <span
+              style={{ color: "#6699ff", textShadow: "1px 1px 1px #000000" }}
+            >
+              G
+            </span>
+            <span style={{ color: "#fc0", textShadow: "1px 1px 1px #000000" }}>
+              U{" "}
+            </span>
+            <span
+              style={{
+                textΤransform: "capitalize",
+                color: "red",
+                textShadow: "1px 1px 1px #000000",
+              }}
+            >
+              - The Little Wizard
+            </span>
+          </h1>
+          <p>
+            At
+            <span>
+              <span
+                style={{ color: "#66ff00", textShadow: "1px 1px 1px #000000" }}
+              >
+                {" "}
+                A
+              </span>
+              <span
+                style={{ color: "#ff63ca", textShadow: "1px 1px 1px #000000" }}
+              >
+                G
+              </span>
+              <span
+                style={{ color: "#6699ff", textShadow: "1px 1px 1px #000000" }}
+              >
+                G
+              </span>
+              <span
+                style={{ color: "#fc0", textShadow: "1px 1px 1px #000000" }}
+              >
+                U{" "}
+              </span>
+              <span
+                style={{
+                  textΤransform: "capitalize",
+                  color: "red",
+                  textShadow: "1px 1px 1px #000000",
+                }}
+              >
+                The Little Wizard&nbsp;
+              </span>
+            </span>
+            &nbsp;we encourage pre-school kids to learn through singing and
+            playing, by providing enjoyable nursery rhymes with beautiful
+            animation. Our team of educators has created some of the most
+            popular children’s songs that entertain and also teach kids about
+            the ABCs, numbers, shapes, colors, and more. Our little ones learn
+            to focus and play as well as shape family and friendship values.
+          </p>
+        </div>
+      </IndexHead>
+      <div className="text-center">
+        <ImgMenu />
+      </div>
+    </Layout>
+  )
+}
+
+export default ContactSection
