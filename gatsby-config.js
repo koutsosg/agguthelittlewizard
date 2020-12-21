@@ -16,7 +16,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-sharp`,
+
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     {
