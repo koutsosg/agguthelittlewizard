@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const lyric = path.resolve(`./src/templates/lyric.js`)
+  const coloring = path.resolve(`./src/templates/coloring.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -46,8 +47,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
       createPage({
-        path: post.fields.slug,
+        path: `lyrics${post.fields.slug}`,
         component: lyric,
+        context: {
+          id: post.id,
+          previousPostId,
+          nextPostId,
+        },
+      })
+
+      createPage({
+        path: `coloring${post.fields.slug}`,
+        component: coloring,
         context: {
           id: post.id,
           previousPostId,
