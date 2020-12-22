@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-
+import React from "react"
+import { graphql } from "gatsby"
 const ColoringTemplate = ({ data, location }) => {
   return <div>ahaha</div>
 }
@@ -7,7 +7,7 @@ const ColoringTemplate = ({ data, location }) => {
 export default ColoringTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query BlogPostBySlug2(
     $id: String!
     $previousPostId: String
     $nextPostId: String

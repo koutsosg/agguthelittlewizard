@@ -12,7 +12,6 @@ import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 
 const LyricHead = styled.header`
   text-indent: 50px;
-
   letter-spacing: 2px;
   margin-left: 10%;
   margin-right: 10%;
@@ -33,7 +32,7 @@ const LyricTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
         /* featuredImage={post.frontmatter.vThumb.publicURL} */
       />
-      <LyricHead className="py-5">
+      <LyricHead>
         <h1 itemProp="headline">{post.frontmatter.title}</h1>
 
         <p> {post.frontmatter.description}</p>
@@ -140,7 +139,7 @@ const LyricTemplate = ({ data, location }) => {
                   color: `#fcff00`,
                   fontSize: `1.4rem`,
                 }}
-                to={next.fields.slug}
+                to={`/lyrics${next.fields.slug}`}
                 rel="next"
               >
                 <FontAwesomeIcon icon={faArrowLeft} /> {next.frontmatter.title}
@@ -155,7 +154,7 @@ const LyricTemplate = ({ data, location }) => {
                   color: `#fcff00`,
                   fontSize: `1.4rem`,
                 }}
-                to={previous.fields.slug}
+                to={`/lyrics${previous.fields.slug}`}
                 rel="prev"
               >
                 {previous.frontmatter.title}{" "}

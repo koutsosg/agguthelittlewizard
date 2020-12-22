@@ -8,8 +8,6 @@ import styled from "styled-components"
 import ImgMenu from "../components/imgMenu"
 
 const LyricHead = styled.header`
-  text-indent: 50px;
-
   letter-spacing: 2px;
   margin-left: 10%;
   margin-right: 10%;
@@ -32,8 +30,8 @@ const AgguIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Aggu The Little Wizard || Nursery Rhymes" />
-      <LyricHead className="py-5">
-        <h1>Stay Tuned</h1>
+      <LyricHead>
+        <h1 className="text-center">Stay Tuned</h1>
       </LyricHead>
       <MainPlayer vidId={vidId} />
       <ImgMenu />

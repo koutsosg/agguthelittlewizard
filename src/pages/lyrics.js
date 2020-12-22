@@ -49,7 +49,7 @@ const songIndex = ({ data, location }) => {
                 key={post.fields.slug}
               >
                 <div className="category-tile bordrud">
-                  <Link to={post.fields.slug} itemProp="url">
+                  <Link to={`/lyrics${post.fields.slug}`} itemProp="url">
                     <Img
                       fluid={post.frontmatter.videoThumb.childImageSharp.fluid}
                       alt={`Aggu ${title} thumbnail`}

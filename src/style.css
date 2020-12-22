@@ -102,7 +102,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-2);
   color: var(--color-text);
-
+  text-shadow: 1px 1px 1px #adb5bd;
   text-align: center;
   color: #993387;
 }
