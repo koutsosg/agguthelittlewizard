@@ -37,49 +37,7 @@ const LyricTemplate = ({ data, location }) => {
 
         <p> {post.frontmatter.description}</p>
       </LyricHead>
-      <nav className="lyrics-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {next && (
-              <Link
-                style={{
-                  fontFamily: `balooregular`,
-                  color: `#a32ba3`,
-                  fontSize: `1.4rem`,
-                }}
-                to={next.fields.slug}
-                rel="next"
-              >
-                <FontAwesomeIcon icon={faArrowLeft} /> {next.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {previous && (
-              <Link
-                style={{
-                  fontFamily: `balooregular`,
-                  color: `#a32ba3`,
-                  fontSize: `1.4rem`,
-                }}
-                to={previous.fields.slug}
-                rel="prev"
-              >
-                {previous.frontmatter.title}{" "}
-                <FontAwesomeIcon icon={faArrowRight} />
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+
       <div className="row">
         <div className="col-lg-6 col-md-6 p-3">
           <div className="">
