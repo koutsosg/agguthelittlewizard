@@ -17,7 +17,7 @@ const Logo = () => {
     query {
       file(name: { eq: "aggu-logo" }, extension: { eq: "png" }) {
         childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
+          fluid(maxWidth: 500, quality: 70) {
             ...GatsbyImageSharpFluid_withWebp
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
