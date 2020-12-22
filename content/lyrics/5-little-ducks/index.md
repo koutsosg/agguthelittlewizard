@@ -4,7 +4,7 @@ date: "2020-07-18"
 description: "I hope you don't concern your parents like those little ducks! Will you sing with me for this new adventure? "
 videoSrcURL: "5QHx478T7yA"
 
-vThumb: "5ducks-lineart.jpg"
+vThumb: "5ducks-thumb.png"
 cThumb: "5ducks-lineart.jpg"
 colId: "5ducks"
 category:
