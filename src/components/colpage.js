@@ -5,6 +5,7 @@ const ColPage = ({ cThumb, title, lineArt, colId }) => (
     style={{
       margin: "auto",
       objectFit: "contain",
+      maxWidth: "600px",
     }}
   >
     <a id={colId} href={lineArt} download>
