@@ -157,15 +157,7 @@ export const pageQuery = graphql`
           }
           publicURL
         }
-        coloringThumb: cThumb {
-          childImageSharp {
-            fluid(maxWidth: 600, maxHeight: 424, quality: 72) {
-              ...GatsbyImageSharpFluid_withWebp
-              ...GatsbyImageSharpFluidLimitPresentationSize
-            }
-          }
-          publicURL
-        }
+
         videoSrcURL
       }
     }
