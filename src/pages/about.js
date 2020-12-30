@@ -1,19 +1,22 @@
 import React from "react"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import ImgMenu from "../components/imgMenu"
+import SEO from "../components/seo"
 const IndexHead = styled.header`
-  text-indent: 50px;
   letter-spacing: 2px;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-top: 10px;
 `
 
-const ContactSection = ({ location }) => {
+const ContactSection = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
-    <Layout location={location}>
-      <IndexHead className="py-3 p-5">
+    <Layout location={location} title={siteTitle}>
+      <SEO
+        title="About Aggu"
+        featuredImage={`https://agguthelittlewizard.com${data.mainog.publicURL}`}
+      />
+      <IndexHead className="py-3 px-3">
         <div className="mw-30">
           <h1 className="text-center ">
             <span
@@ -95,3 +98,15 @@ const ContactSection = ({ location }) => {
 }
 
 export default ContactSection
+export const pageQuery = graphql`
+  query {
+    mainog: file(relativePath: { eq: "mainog.png" }) {
+      publicURL
+    }
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

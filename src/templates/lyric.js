@@ -30,7 +30,7 @@ const LyricTemplate = ({ data, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        /* featuredImage={post.frontmatter.vThumb.publicURL} */
+        featuredImage={`https://agguthelittlewizard.com${post.frontmatter.videoThumbOg.publicURL}`}
       />
       <LyricHead>
         <h1 itemProp="headline">{post.frontmatter.title}</h1>
@@ -148,14 +148,14 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+
         videoThumb: vThumb {
           childImageSharp {
-            fluid(maxWidth: 800, maxHeight: 450, quality: 72) {
+            fluid(maxWidth: 700, maxHeight: 395, quality: 72) {
               ...GatsbyImageSharpFluid_withWebp
               ...GatsbyImageSharpFluidLimitPresentationSize
             }
           }
-          publicURL
         }
         coloringThumb: cThumb {
           childImageSharp {
@@ -164,6 +164,8 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluidLimitPresentationSize
             }
           }
+        }
+        videoThumbOg: vThumbOg {
           publicURL
         }
         videoSrcURL

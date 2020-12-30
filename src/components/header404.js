@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 const Header404 = () => {
-  const data = useStaticQuery(
+  /*  const data = useStaticQuery(
     graphql`
       query {
         desktop: file(relativePath: { eq: "404.png" }) {
@@ -20,22 +20,22 @@ const Header404 = () => {
   )
   // Set ImageData.
   const imageData = data.desktop.childImageSharp.fluid
-
+ */
   return (
-    <BackgroundImage
+    <div
       Tag="section"
-      fluid={imageData}
       backgroundColor={`#040e18`}
       style={{
-        minHeight: "56vh",
-        width: "100%",
-        backgroundPosition: "bottom center",
-        backgroundRepeat: "repeat-y",
+        height: "56vh",
+
+        transition: "0.3s background ease",
+        background: "url('/404.png') no-repeat",
+        backgroundPosition: "bottom",
         backgroundSize: "cover",
       }}
     >
       <Navbar />
-    </BackgroundImage>
+    </div>
   )
 }
 

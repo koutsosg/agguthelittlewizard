@@ -8,7 +8,12 @@ const ColPage = ({ cThumb, title, lineArt, colId }) => (
       maxWidth: "600px",
     }}
   >
-    <a id={colId} href={lineArt} download>
+    <a
+      id={colId}
+      href={lineArt}
+      title="Click to Download the Coloring page"
+      download
+    >
       <Img
         style={{
           margin: "auto",

@@ -19,7 +19,11 @@ const songIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title="All Nursery Rhymes" />
+        <SEO
+          title="All Nursery Rhymes"
+          description="Sing with me and all the party animals in this musical journey!"
+          featuredImage={`https://ohmy-gad.com${data.lyricog.publicURL}`}
+        />
 
         <p>
           No Lyrics found. Add markdown posts to "content/blog" (or the
@@ -32,7 +36,11 @@ const songIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All Nursery Rhymes" />
+      <SEO
+        title="All Nursery Rhymes"
+        description="Sing with me and all the party animals in this musical journey!"
+        featuredImage={`https://agguthelittlewizard.com${data.lyricog.publicURL}`}
+      />
       <div className="linear">
         <LyricHead className="py-5">
           <h1>Nursery Rhymes</h1>
@@ -71,6 +79,9 @@ export default songIndex
 
 export const pageQuery = graphql`
   query {
+    lyricog: file(relativePath: { eq: "lyricog.jpg" }) {
+      publicURL
+    }
     site {
       siteMetadata {
         title
@@ -88,7 +99,7 @@ export const pageQuery = graphql`
           description
           videoThumb: vThumb {
             childImageSharp {
-              fluid(maxWidth: 800, maxHeight: 450, quality: 72) {
+              fluid(maxWidth: 440, maxHeight: 248, quality: 72) {
                 ...GatsbyImageSharpFluid_withWebp
                 ...GatsbyImageSharpFluidLimitPresentationSize
               }

@@ -3,13 +3,13 @@ import Navbar from "./Navbar/Navbar"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
-const Header404 = () => {
-  const data = useStaticQuery(
+const Header = () => {
+  /*   const data = useStaticQuery(
     graphql`
       query {
         desktop: file(relativePath: { eq: "long_bg.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
+            fluid(maxWidth: 1880, maxHeight: 515, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
               ...GatsbyImageSharpFluidLimitPresentationSize
             }
@@ -20,23 +20,23 @@ const Header404 = () => {
   )
   // Set ImageData.
   const imageData = data.desktop.childImageSharp.fluid
-
+ */
   return (
-    <BackgroundImage
+    <div
       Tag="section"
-      fluid={imageData}
       backgroundColor={`#040e18`}
       style={{
-        minHeight: "56vh",
-        width: "100%",
-        backgroundPosition: "bottom center",
-        backgroundRepeat: "repeat-y",
+        height: "56vh",
+
+        transition: "0.3s background ease",
+        background: "url('/long_bg.png') no-repeat",
+        backgroundPosition: "bottom",
         backgroundSize: "cover",
       }}
     >
       <Navbar />
-    </BackgroundImage>
+    </div>
   )
 }
 
-export default Header404
+export default Header

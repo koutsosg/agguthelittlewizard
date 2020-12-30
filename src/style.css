@@ -92,8 +92,7 @@ html {
 }
 @font-face {
   font-family: "balooregular";
-  src: url("/fonts/baloo-regular-webfont.woff2") format("woff2"),
-    url("/fonts/baloo-regular-webfont.woff") format("woff");
+  src: url("/fonts/baloo-regular-webfont.woff") format("woff");
   font-weight: lighter;
   font-style: normal;
   font-display: swap;
@@ -474,29 +473,29 @@ p {
  */
 
 .aColor {
-  color: #68ff04;
-}
-.aColor:hover {
   color: #c5ff04;
 }
+.aColor:hover {
+  color: #68ff04;
+}
 .bColor {
-  color: #ff65cb;
+  color: #ff9bcd;
 }
 .bColor:hover {
-  color: #ff9bcd;
+  color: #ff65cb;
 }
 
 .cColor {
-  color: #679afe;
-}
-.cColor:hover {
   color: #9acdff;
 }
+.cColor:hover {
+  color: #679afe;
+}
 .dColor {
-  color: #ffcd03;
+  color: #ffff03;
 }
 .dColor:hover {
-  color: #ffff03;
+  color: #ffcd03;
 }
 
 .eColor {

@@ -5,18 +5,24 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const NavItem = styled(Link)`
-  text-shadow: 1px 1px 1px #000000;
+  text-shadow: #001004 0px 0px 4px;
+  padding: 5px;
+  background-color: #9a3488;
+  border-radius: 10px;
+  border: 1px solid;
   text-decoration: none;
   font-family: balooregular;
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
+  line-height: 0.9;
   transition: all 200ms ease-in;
   position: relative;
   font-size: 1.5rem;
   :hover {
     ::after {
       width: 100%;
+      text-decoration: none;
     }
   }
 

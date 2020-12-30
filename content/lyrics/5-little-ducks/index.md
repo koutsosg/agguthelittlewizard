@@ -6,6 +6,8 @@ videoSrcURL: "5QHx478T7yA"
 
 vThumb: "5ducks-thumb.png"
 cThumb: "5ducks-lineart.jpg"
+vThumbOg: "5ducks-thumb-og.png"
+cThumbOg: "5ducks-lineart-og.png"
 colId: "5ducks"
 category:
   - Ducks

@@ -9,7 +9,9 @@ const Vimage = ({ onClick, vThumb, title }) => {
       style={{
         margin: "auto",
         objectFit: "contain",
-        maxWidth: "800px",
+        maxWidth: "700px",
+        maxHeight: "395px",
+
         borderRadius: "1.25rem",
       }}
     >
@@ -29,8 +31,8 @@ const Vimage = ({ onClick, vThumb, title }) => {
 
             left: 0,
             margin: "auto",
-            maxWidth: "800px",
-            height: "auto",
+            maxWidth: "700px",
+            maxHeight: "395px",
             position: "absolute",
             right: 0,
             top: "-100%",

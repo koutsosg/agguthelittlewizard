@@ -66,30 +66,32 @@ const Footer = () => {
         <a
           href="https://www.facebook.com/aggu.wizard/"
           name="Facebook"
+          title="Like Us On Facebook"
           style={{ color: "#fcff00" }}
           target="_blank"
           rel="noreferrer"
+          aria-label="Facebook Link"
         >
-          <FontAwesomeIcon
-            className="mx-1 cColor"
-            size="2x"
-            icon={faFacebook}
-          />
+          <FontAwesomeIcon className="cColor" size="2x" icon={faFacebook} />
         </a>
         <a
           href="https://www.youtube.com/channel/UCL2uSUlDuokoNRae9rPLrAw"
           name="Youtube"
+          title="Subscribe Our Channel"
           target="_blank"
           style={{ color: "red" }}
           rel="noreferrer"
+          aria-label="Youtube Link"
         >
           <FontAwesomeIcon className="mx-1 eColor" size="2x" icon={faYoutube} />
         </a>
         <a
           href="https://www.instagram.com/aggu_thelittlewizard/"
+          title="Contact Aggu"
           name="Instagram"
           target="_blank"
           rel="noreferrer"
+          aria-label="Instagram Link"
         >
           <FontAwesomeIcon
             className="mx-1 bColor"

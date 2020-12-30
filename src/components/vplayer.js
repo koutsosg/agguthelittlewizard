@@ -3,7 +3,8 @@ const Video = ({ videoSrcURL, title }) => (
   <div
     className="youtube-player img-thumbnail category-tile embed-responsive embed-responsive-16by9 img-fluid w-100 "
     style={{
-      maxWidth: "800px",
+      maxWidth: "700px",
+      maxHeight: "395px",
       margin: "auto",
       borderRadius: "1.25rem",
     }}

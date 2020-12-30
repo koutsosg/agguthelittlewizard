@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -33,7 +33,11 @@ const songIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All Coloring Pages" />
+      <SEO
+        title="All Coloring Pages"
+        description="Download and print a coloring page for every Nursery Rhyme."
+        featuredImage={`https://agguthelittlewizard.com${data.coloringog.publicURL}`}
+      />
       <div className="linear">
         <LyricHead className="py-5">
           <h1>Coloring Pages</h1>
@@ -48,14 +52,15 @@ const songIndex = ({ data, location }) => {
                 key={post.fields.slug}
               >
                 <div className="category-tile bordrud">
-                  <ColPage
-                    lineArt={post.frontmatter.coloringThumb.publicURL}
-                    title={post.frontmatter.title}
-                    cThumb={
-                      post.frontmatter.coloringThumb.childImageSharp.fluid
-                    }
-                    colId={post.frontmatter.colId}
-                  />
+                  <Link to={`/coloring${post.fields.slug}`} itemProp="url">
+                    <ColPage
+                      title={post.frontmatter.title}
+                      cThumb={
+                        post.frontmatter.coloringThumb.childImageSharp.fluid
+                      }
+                      colId={post.frontmatter.colId}
+                    />
+                  </Link>
                 </div>
               </div>
             )
@@ -70,6 +75,9 @@ export default songIndex
 
 export const pageQuery = graphql`
   query {
+    coloringog: file(relativePath: { eq: "coloringog.png" }) {
+      publicURL
+    }
     site {
       siteMetadata {
         title

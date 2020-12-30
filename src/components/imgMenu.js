@@ -22,7 +22,7 @@ const ContactImg2 = styled(Img)`
   min-width: 15vw;
   width: 15vw;
 `
-const ImgMenu = ({ data, location }) => {
+const ImgMenu = () => {
   const icon = useStaticQuery(
     graphql`
       query {
@@ -72,11 +72,12 @@ const ImgMenu = ({ data, location }) => {
         to="/lyrics"
         className="bColor px-4"
         style={{ display: "inline-block" }}
+        title="Visit Lyrics Pages"
       >
         <LinkSpan>Learn The Lyrics</LinkSpan>
         <ContactImg2
           fluid={icon.jazzy.childImageSharp.fluid}
-          alt="icon"
+          alt="Jazzy image"
           className=""
         ></ContactImg2>
       </Link>
@@ -84,11 +85,12 @@ const ImgMenu = ({ data, location }) => {
         to="/colorings"
         className="cColor aggubw px-4"
         style={{ display: "inline-block" }}
+        title="Visit The Coloring Pages"
       >
         <LinkSpan> Play With Colors </LinkSpan>
         <ContactImg2
           fluid={icon.aggubw.childImageSharp.fluid}
-          alt="icon"
+          alt="Black and White Aggu"
           className=""
         ></ContactImg2>
       </Link>
@@ -96,11 +98,12 @@ const ImgMenu = ({ data, location }) => {
         to="https://www.youtube.com/channel/UCL2uSUlDuokoNRae9rPLrAw"
         className="eColor px-4"
         style={{ display: "inline-block" }}
+        title="Visit our Youtube Channel"
       >
         <LinkSpan>Visit Our Channel</LinkSpan>
         <ContactImg2
           fluid={icon.farmer.childImageSharp.fluid}
-          alt="icon"
+          alt="old McDonald"
           className=""
         ></ContactImg2>
       </Link>
@@ -108,11 +111,12 @@ const ImgMenu = ({ data, location }) => {
         to="/about"
         className="dColor px-4"
         style={{ display: "inline-block" }}
+        title="Who is Aggu"
       >
         <LinkSpan>Who is Aggu?</LinkSpan>
         <ContactImg2
           fluid={icon.aggucl.childImageSharp.fluid}
-          alt="icon"
+          alt="Aggu image"
           className=""
         ></ContactImg2>
       </Link>

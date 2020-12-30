@@ -10,13 +10,9 @@ const SocialButtons = styled.button`
   z-index: 99;
   outline: none;
   cursor: pointer;
-  padding-left: 5vh;
-  padding-right: 4vh;
-  padding-top: 2vh;
-  padding-bottom: 1vh;
+  padding: 1vh 1vh 1vh 5vh;
   border: none;
   border-radius: 100%;
-  font-size: 18px;
 `
 
 const ContactImg = styled(Img)`
