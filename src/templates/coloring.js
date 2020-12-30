@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import ColPage from "../components/colpage"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -153,7 +153,6 @@ export const pageQuery = graphql`
     previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {
         slug
-        colId
       }
       frontmatter {
         title
@@ -162,7 +161,6 @@ export const pageQuery = graphql`
     next: markdownRemark(id: { eq: $nextPostId }) {
       fields {
         slug
-        colId
       }
       frontmatter {
         title

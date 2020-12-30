@@ -164,6 +164,7 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluidLimitPresentationSize
             }
           }
+          publicURL
         }
         videoThumbOg: vThumbOg {
           publicURL
