@@ -78,6 +78,7 @@ export const pageQuery = graphql`
     coloringog: file(relativePath: { eq: "coloringog.png" }) {
       publicURL
     }
+
     site {
       siteMetadata {
         title

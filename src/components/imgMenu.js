@@ -67,10 +67,10 @@ const ImgMenu = () => {
   )
 
   return (
-    <div className="text-center py-5">
+    <div className="text-center py-5 row">
       <Link
         to="/lyrics"
-        className="bColor px-4"
+        className="bColor px-4 col-lg-3 col-md-3 col-sm-6"
         style={{ display: "inline-block" }}
         title="Visit Lyrics Pages"
       >
@@ -83,7 +83,7 @@ const ImgMenu = () => {
       </Link>
       <Link
         to="/colorings"
-        className="cColor aggubw px-4"
+        className="cColor aggubw px-4 col-lg-3 col-md-3 col-sm-6"
         style={{ display: "inline-block" }}
         title="Visit The Coloring Pages"
       >
@@ -96,7 +96,7 @@ const ImgMenu = () => {
       </Link>
       <Link
         to="https://www.youtube.com/channel/UCL2uSUlDuokoNRae9rPLrAw"
-        className="eColor px-4"
+        className="eColor px-4 col-lg-3 col-md-3 col-sm-6"
         style={{ display: "inline-block" }}
         title="Visit our Youtube Channel"
       >
@@ -109,7 +109,7 @@ const ImgMenu = () => {
       </Link>
       <Link
         to="/about"
-        className="dColor px-4"
+        className="dColor px-4 col-lg-3 col-md-3 col-sm-6"
         style={{ display: "inline-block" }}
         title="Who is Aggu"
       >

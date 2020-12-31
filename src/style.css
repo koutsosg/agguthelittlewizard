@@ -390,6 +390,20 @@ a:focus {
 .category-tile:hover {
   box-shadow: 0 1px 20px 10px #993387;
 }
+.category-tile2 span {
+  font-family: var(--font-body);
+  position: absolute;
+  text-shadow: none;
+  border-radius: 5px;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.7em;
+  text-transform: capitalize;
+  background-color: #993387;
+  color: white;
+  opacity: 0.8;
+}
 button:focus {
   outline: none !important;
   outline: none !important;

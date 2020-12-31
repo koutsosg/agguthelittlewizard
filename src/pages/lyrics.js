@@ -22,7 +22,7 @@ const songIndex = ({ data, location }) => {
         <SEO
           title="All Nursery Rhymes"
           description="Sing with me and all the party animals in this musical journey!"
-          featuredImage={`https://ohmy-gad.com${data.lyricog.publicURL}`}
+          featuredImage={`https://agguthelittlewizard.com${data.lyricog.publicURL}`}
         />
 
         <p>
@@ -57,7 +57,7 @@ const songIndex = ({ data, location }) => {
                 key={post.fields.slug}
               >
                 <div className="category-tile bordrud">
-                  <Link to={`/lyrics${post.fields.slug}`} itemProp="url">
+                  <Link to={`/lyric${post.fields.slug}`} itemProp="url">
                     <Img
                       fluid={post.frontmatter.videoThumb.childImageSharp.fluid}
                       alt={`Aggu ${title} thumbnail`}

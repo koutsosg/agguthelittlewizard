@@ -21,7 +21,7 @@ const ColPage = ({ cThumb, title, lineArt, colId }) => (
           maxWidth: "600px",
           borderRadius: "1.25rem",
         }}
-        className={"img-thumbnail category-tile bordrud"}
+        className={"img-thumbnail category-tile"}
         fluid={cThumb}
         title="Click to download"
         alt={"Aggu " + title + " coloring page thumbnail"}

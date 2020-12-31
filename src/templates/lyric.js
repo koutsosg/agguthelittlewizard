@@ -97,7 +97,7 @@ const LyricTemplate = ({ data, location }) => {
                   color: `#fcff00`,
                   fontSize: `1.4rem`,
                 }}
-                to={`/lyrics${next.fields.slug}`}
+                to={`/lyric${next.fields.slug}`}
                 rel="next"
               >
                 <FontAwesomeIcon icon={faArrowLeft} /> {next.frontmatter.title}
@@ -112,7 +112,7 @@ const LyricTemplate = ({ data, location }) => {
                   color: `#fcff00`,
                   fontSize: `1.4rem`,
                 }}
-                to={`/lyrics${previous.fields.slug}`}
+                to={`/lyric${previous.fields.slug}`}
                 rel="prev"
               >
                 {previous.frontmatter.title}{" "}
