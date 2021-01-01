@@ -31,7 +31,7 @@ const ScrollTop = () => {
       query {
         totop: file(relativePath: { eq: "wandButton.png" }) {
           childImageSharp {
-            fluid(maxWidth: 500, maxHeight: 500, quality: 72) {
+            fluid(maxWidth: 50, maxHeight: 50, quality: 72) {
               ...GatsbyImageSharpFluid_withWebp
               ...GatsbyImageSharpFluidLimitPresentationSize
             }

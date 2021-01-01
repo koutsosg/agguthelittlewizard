@@ -31,6 +31,7 @@ const AgguIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
+        siteUrl={`${data.site.siteMetadata?.siteUrl}`}
         title="Nursery Rhymes"
         featuredImage={`https://agguthelittlewizard.com${data.mainog.publicURL}`}
       />
@@ -56,9 +57,13 @@ export const pageQuery = graphql`
     mainog: file(relativePath: { eq: "mainog.png" }) {
       publicURL
     }
+    sitePage {
+      path
+    }
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
 

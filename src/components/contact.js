@@ -12,6 +12,7 @@ const SocialButtons = styled.button`
   cursor: pointer;
   padding: 1vh 1vh 1vh 5vh;
   border: none;
+  background-color: transparent;
   border-radius: 100%;
 `
 
@@ -33,7 +34,7 @@ const ContactSection = () => {
       query {
         ytIcon: file(relativePath: { eq: "yticon.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300, maxHeight: 300, quality: 72) {
+            fluid(maxWidth: 50, maxHeight: 50, quality: 72) {
               ...GatsbyImageSharpFluid_withWebp
               ...GatsbyImageSharpFluidLimitPresentationSize
             }
@@ -42,7 +43,7 @@ const ContactSection = () => {
         }
         fbIcon: file(relativePath: { eq: "fbicon.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300, maxHeight: 300, quality: 72) {
+            fluid(maxWidth: 50, maxHeight: 50, quality: 72) {
               ...GatsbyImageSharpFluid_withWebp
               ...GatsbyImageSharpFluidLimitPresentationSize
             }
@@ -51,7 +52,7 @@ const ContactSection = () => {
         }
         igIcon: file(relativePath: { eq: "igicon.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300, maxHeight: 300, quality: 72) {
+            fluid(maxWidth: 50, maxHeight: 50, quality: 72) {
               ...GatsbyImageSharpFluid_withWebp
               ...GatsbyImageSharpFluidLimitPresentationSize
             }
@@ -60,7 +61,7 @@ const ContactSection = () => {
         }
         mailIcon: file(relativePath: { eq: "mailicon.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300, maxHeight: 300, quality: 72) {
+            fluid(maxWidth: 50, maxHeight: 50, quality: 72) {
               ...GatsbyImageSharpFluid_withWebp
               ...GatsbyImageSharpFluidLimitPresentationSize
             }

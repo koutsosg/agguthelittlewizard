@@ -13,6 +13,7 @@ const ContactSection = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
+        siteUrl={`${data.site.siteMetadata?.siteUrl}/about`}
         title="About Aggu"
         featuredImage={`https://agguthelittlewizard.com${data.mainog.publicURL}`}
       />

@@ -34,6 +34,7 @@ const songIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
+        siteUrl={`${data.site.siteMetadata?.siteUrl}/colorings`}
         title="All Coloring Pages"
         description="Download and print a coloring page for every Nursery Rhyme."
         featuredImage={`https://agguthelittlewizard.com${data.coloringog.publicURL}`}
@@ -52,7 +53,11 @@ const songIndex = ({ data, location }) => {
                 key={post.fields.slug}
               >
                 <div className="category-tile bordrud">
-                  <Link to={`/coloring${post.fields.slug}`} itemProp="url">
+                  <Link
+                    to={`/coloring${post.fields.slug}`}
+                    itemProp="url"
+                    title="click to download the page"
+                  >
                     <ColPage
                       title={post.frontmatter.title}
                       cThumb={

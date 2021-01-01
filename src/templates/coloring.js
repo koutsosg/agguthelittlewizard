@@ -23,7 +23,8 @@ const ColoringTemplate = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title={post.frontmatter.title}
+        siteUrl={`${data.site.siteMetadata?.siteUrl}/coloring${post.fields.slug}`}
+        title={post.frontmatter.title + " coloring"}
         description={`Download the drawing of ${post.frontmatter.title}`}
         featuredImage={`https://agguthelittlewizard.com${post.frontmatter.coloringThumbOg.publicURL}`}
       />
@@ -121,14 +122,20 @@ export const pageQuery = graphql`
     $previousPostId: String
     $nextPostId: String
   ) {
+    sitePage {
+      path
+    }
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     markdownRemark(id: { eq: $id }) {
       id
-
+      fields {
+        slug
+      }
       html
       frontmatter {
         title

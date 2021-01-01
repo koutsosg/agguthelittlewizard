@@ -28,7 +28,8 @@ const LyricTemplate = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title={post.frontmatter.title}
+        siteUrl={`${data.site.siteMetadata?.siteUrl}/lyric${post.fields.slug}`}
+        title={post.frontmatter.title + " lyrics"}
         description={post.frontmatter.description || post.excerpt}
         featuredImage={`https://agguthelittlewizard.com${post.frontmatter.videoThumbOg.publicURL}`}
       />
@@ -138,10 +139,14 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     markdownRemark(id: { eq: $id }) {
       id
+      fields {
+        slug
+      }
       excerpt(pruneLength: 160)
       html
       frontmatter {

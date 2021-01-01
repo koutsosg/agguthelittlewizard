@@ -28,7 +28,7 @@ const ImgMenu = () => {
       query {
         jazzy: file(relativePath: { eq: "jazzy.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300, maxHeight: 300, quality: 72) {
+            fluid(maxWidth: 280, maxHeight: 280, quality: 72) {
               ...GatsbyImageSharpFluid_withWebp
               ...GatsbyImageSharpFluidLimitPresentationSize
             }
@@ -37,7 +37,7 @@ const ImgMenu = () => {
         }
         aggubw: file(relativePath: { eq: "aggubw.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300, maxHeight: 300, quality: 72) {
+            fluid(maxWidth: 280, maxHeight: 280, quality: 72) {
               ...GatsbyImageSharpFluid_withWebp
               ...GatsbyImageSharpFluidLimitPresentationSize
             }
@@ -46,7 +46,7 @@ const ImgMenu = () => {
         }
         farmer: file(relativePath: { eq: "farmer.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300, maxHeight: 300, quality: 72) {
+            fluid(maxWidth: 280, maxHeight: 280, quality: 72) {
               ...GatsbyImageSharpFluid_withWebp
               ...GatsbyImageSharpFluidLimitPresentationSize
             }
@@ -55,7 +55,7 @@ const ImgMenu = () => {
         }
         aggucl: file(relativePath: { eq: "aggucl.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300, maxHeight: 300, quality: 72) {
+            fluid(maxWidth: 280, maxHeight: 280, quality: 72) {
               ...GatsbyImageSharpFluid_withWebp
               ...GatsbyImageSharpFluidLimitPresentationSize
             }

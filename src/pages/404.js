@@ -15,7 +15,7 @@ const NotFoundPage = ({ data, location }) => {
         title="404: Not Found"
         description="How you got here is a mystery. But you can click one of the Links
           below ."
-        featuredImage={`https://agguthelittlewizard.com/${data.errorImg.publicURL}`}
+        featuredImage={`https://agguthelittlewizard.com${data.errorImg.publicURL}`}
       />
       <Header404 />
       <div className="linear" style={{ paddingBottom: `5vh` }}>
