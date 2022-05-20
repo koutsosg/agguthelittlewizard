@@ -8,6 +8,7 @@ const Layout = ({ children }) => {
   return (
     <div className="top">
       <Header />
+
       <div className="linear">{children}</div>
       <Footer />
       <ScrollTop />

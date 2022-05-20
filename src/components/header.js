@@ -1,6 +1,6 @@
 import React from "react"
 import Navbar from "./Navbar/Navbar"
-
+import Headroom from "react-headroom"
 const Header = () => {
   return (
     <div
@@ -15,7 +15,9 @@ const Header = () => {
         backgroundSize: "cover",
       }}
     >
-      <Navbar />
+      <Headroom>
+        <Navbar />
+      </Headroom>
     </div>
   )
 }
